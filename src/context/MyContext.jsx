@@ -66,7 +66,7 @@ export const MyContextProvider = ({ children }) => {
           // check if we are in the main(discovery page) page and make the request if true
           location.pathname == "/"
             ? fetch(
-                `https://api.themoviedb.org/3/discover/movie?include_adult=true&include_video=true&language=en-US&page=${
+                `https://api.themoviedb.org/3/discover/movie?include_adult=false&include_video=true&language=en-US&page=${
                   page || 1
                 }${year ? `&primary_release_year=${year}` : ""}${
                   sort ? `&sort_by=${sort}` : ""
