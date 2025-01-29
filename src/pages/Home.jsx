@@ -11,6 +11,7 @@ import SearchFilter from "../components/SearchFilter";
 import { useLocation } from "react-router-dom";
 import PageInfo from "../components/PageInfo"
 import { useMyContext } from "../context/MyContext";
+import AdSenseAd from "../components/AdSenseAd";
 
 const Home = () => {
 
@@ -66,7 +67,14 @@ const Home = () => {
             total_pages={discoveryPages}
             pageToPaginate="Discover"
           />
+
+<AdSenseAd
+        client="ca-pub-6737754409287179"
+        slot="1691051303"
+      />
         </div>
+
+
 
         <ChatBotIcon
           changeChatBotState={changeChatBotState}

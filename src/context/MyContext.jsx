@@ -7,7 +7,7 @@ const MyContext = createContext();
 export const useMyContext = () => {
   const context = useContext(MyContext);
   if (context === undefined) {
-    throw new Error("useMyContext must be used within a MyContextProvider");
+  throw new Error("useMyContext must be used within a MyContextProvider");
   }
   return context;
 };
@@ -137,7 +137,6 @@ export const MyContextProvider = ({ children }) => {
         setTrendingPages(trendingDataCollection.total_pages);
         setTvShowPages(tvShowDataCollection.total_pages);
         
-
         setTotalResults(searchDataCollection.total_results); // we get the total search results returned 
         location.pathname.includes("search")
           ? searchData != []
