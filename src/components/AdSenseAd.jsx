@@ -1,10 +1,14 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef } from "react";
 
-const AdSenseAd = ({ client, slot, format = 'auto', responsive = 'true' }) => {
+const AdSenseAd = ({ client, slot, format = "auto", responsive = "true" }) => {
   const adLoaded = useRef(false); // Track if the ad is already loaded
 
   useEffect(() => {
-    if (typeof window !== "undefined" && window.adsbygoogle && !adLoaded.current) {
+    if (
+      typeof window !== "undefined" &&
+      window.adsbygoogle &&
+      !adLoaded.current
+    ) {
       try {
         window.adsbygoogle.push({});
         adLoaded.current = true; // Prevent duplicate loading
@@ -18,7 +22,7 @@ const AdSenseAd = ({ client, slot, format = 'auto', responsive = 'true' }) => {
     <div>
       <ins
         className="adsbygoogle"
-        style={{ display: 'block' }}
+        style={{ display: "block" }}
         data-ad-client={client}
         data-ad-slot={slot}
         data-ad-format={format}
@@ -26,7 +30,8 @@ const AdSenseAd = ({ client, slot, format = 'auto', responsive = 'true' }) => {
       ></ins>
       <script
         async
-        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
+        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6737754409287179"
+        crossorigin="anonymous"
       ></script>
     </div>
   );
