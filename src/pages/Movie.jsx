@@ -105,12 +105,12 @@ const Movie = () => {
                     src={`https://image.tmdb.org/t/p/original${movieDetails.poster_path}`}
                     alt={movieDetails.poster_path}
                   />
-                  <div className="download-button">
+                  {/* <div className="download-button">
                     <div>Download</div> <FaDownload id="download-icon" />
                   </div>
                   <div className="stream-button">
                     <div>Stream</div> <BiSolidMoviePlay id="stream-icon" />
-                  </div>
+                  </div> */}
                 </div>
                 <div className="movie-details">
                   <div className="movie-title">{movieDetails.title}</div>
